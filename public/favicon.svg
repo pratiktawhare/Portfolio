@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="24" fill="url(#grad1)" />
+  <path d="M 30,30 L 70,30 L 70,50 L 50,50 L 50,70 L 30,70 Z" fill="none" />
+  <text x="50%" y="54%" font-family="Inter, -apple-system, sans-serif" font-weight="800" font-size="46" fill="url(#grad2)" dominant-baseline="middle" text-anchor="middle">PT</text>
+</svg>
