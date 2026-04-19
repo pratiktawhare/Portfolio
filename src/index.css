@@ -51,32 +51,47 @@
 }
 
 /* ============================================
-   RESET
+   RESET — use @layer base so Tailwind utilities
+   can properly override margins/padding
    ============================================ */
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+@layer base {
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 24px;
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    max-width: 100vw;
+    overflow-x: hidden;
+    transition: background 0.3s, color 0.3s;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    overflow-x: clip;
+    width: 100%;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--text-3); border-radius: 3px; }
 }
-
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
-  transition: background 0.3s, color 0.3s;
-  -webkit-font-smoothing: antialiased;
-}
-
-::selection { background: var(--accent); color: #fff; }
-
-/* Scrollbar */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--text-3); border-radius: 3px; }
 
 /* ============================================
    DOT GRID BACKGROUND (Aceternity style)
@@ -345,12 +360,69 @@ body {
    ============================================ */
 
 @media (max-width: 768px) {
-  .sec { padding: 56px 0; }
-  .wrap, .wrap-sm { padding: 0 20px; }
+  .sec { padding: 48px 0; }
+  .wrap, .wrap-sm { padding: 0 16px; }
+  
+  .dock { 
+    bottom: 0; 
+    left: 0;
+    transform: none;
+    width: 100vw; 
+    max-width: 100vw; 
+    padding: 10px 8px calc(10px + env(safe-area-inset-bottom, 0px));
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    justify-content: space-evenly;
+    background: var(--bg-dock);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    gap: 0;
+  }
+  .dock-btn { 
+    width: 40px; 
+    height: 40px; 
+  }
+  .dock-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  /* Hide social links & their separators on mobile */
+  .dock-social, .dock-sep-social { display: none !important; }
+
+  /* Skill cards: smaller on mobile */
+  .skill-card {
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .skill-card .icon-wrap {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Pills: smaller on mobile */
+  .pill {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  /* Buttons: ensure they don't overflow */
+  .btn {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
 }
 
-@media (max-width: 480px) {
-  .wrap, .wrap-sm { padding: 0 16px; }
-  .dock { bottom: 12px; padding: 5px 6px; }
-  .dock-btn { width: 32px; height: 32px; }
+@media (max-width: 380px) {
+  .wrap, .wrap-sm { padding: 0 12px; }
+  
+  .dock-btn { 
+    width: 36px; 
+    height: 36px; 
+  }
+  .dock-btn svg {
+    width: 18px;
+    height: 18px;
+  }
 }

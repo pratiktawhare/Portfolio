@@ -14,15 +14,15 @@ export default function Achievements() {
           animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
             <span className="grad">Achievements</span>
           </h2>
-          <p className="text-sm mb-10" style={{ color: 'var(--text-3)' }}>
+          <p className="text-sm mb-5 sm:mb-6" style={{ color: 'var(--text-3)' }}>
             Milestones & recognition
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           {achievements.map((a, i) => (
             <motion.div
               key={a.title}
@@ -31,18 +31,18 @@ export default function Achievements() {
               transition={{ duration: 0.45, delay: i * 0.06 }}
             >
               <div 
-                className="glass flex items-start h-full"
-                style={{ padding: '28px', gap: '20px' }}
+                className="glass flex items-start h-full p-4 sm:p-6 md:p-[28px]"
+                style={{ gap: '14px' }}
               >
-              <span className="text-2xl flex-shrink-0" style={{ marginTop: '2px' }}>{a.icon}</span>
-              <div>
+              <span className="text-xl sm:text-2xl flex-shrink-0" style={{ marginTop: '2px' }}>{a.icon}</span>
+              <div className="min-w-0">
                 <h3
-                  className="text-base font-semibold"
-                  style={{ color: 'var(--text)', marginBottom: '6px' }}
+                  className="text-sm sm:text-base font-semibold"
+                  style={{ color: 'var(--text)', marginBottom: '4px' }}
                 >
                   {a.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-3)' }}>
+                <p className="text-xs sm:text-sm leading-relaxed" style={{ color: 'var(--text-3)' }}>
                   {a.detail}
                 </p>
               </div>

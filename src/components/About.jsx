@@ -35,21 +35,21 @@ function Stat({ stat }) {
   }, [stat])
 
   return (
-    <div className="text-center py-6 px-4">
+    <div className="text-center py-4 sm:py-6 px-3 sm:px-4">
       <div className="flex items-baseline justify-center gap-1 mb-1.5">
         <span
           ref={ref}
-          className="text-2xl font-bold"
+          className="text-xl sm:text-2xl font-bold"
           style={{ color: 'var(--text)' }}
         >
           0
         </span>
-        <span className="text-sm font-medium" style={{ color: 'var(--text-3)' }}>
+        <span className="text-xs sm:text-sm font-medium" style={{ color: 'var(--text-3)' }}>
           {stat.suffix}
         </span>
       </div>
       <p
-        className="text-[11px] uppercase tracking-widest font-medium"
+        className="text-[10px] sm:text-[11px] uppercase tracking-widest font-medium"
         style={{ color: 'var(--text-3)' }}
       >
         {stat.label}
@@ -71,23 +71,23 @@ export default function About() {
           transition={{ duration: 0.6 }}
         >
           {/* Heading */}
-          <h2 className="text-3xl font-bold tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
             About <span className="grad">Me</span>
           </h2>
-          <p className="text-sm mb-10" style={{ color: 'var(--text-3)' }}>
+          <p className="text-sm mb-5 sm:mb-6" style={{ color: 'var(--text-3)' }}>
             A quick intro
           </p>
 
           {/* Bio card */}
-          <div className="glass" style={{ padding: '56px', marginBottom: '24px' }}>
+          <div className="glass p-4 sm:p-6 md:p-10 lg:p-[56px]" style={{ marginBottom: '24px' }}>
             <p
-              className="text-[15px] leading-[2] max-w-3xl"
+              className="text-[13px] sm:text-[15px] leading-[1.8] sm:leading-[2] max-w-3xl"
               style={{ color: 'var(--text-2)' }}
             >
               {personalInfo.bio}
             </p>
 
-            <div className="flex flex-wrap gap-3" style={{ marginTop: '32px', paddingTop: '24px', borderTop: '1px solid var(--border)' }}>
+            <div className="flex flex-wrap gap-2 sm:gap-3" style={{ marginTop: '24px', paddingTop: '20px', borderTop: '1px solid var(--border)' }}>
               {[
                 `📍 ${personalInfo.location}`,
                 `🎓 ${personalInfo.education}`,
@@ -108,6 +108,7 @@ export default function About() {
                   borderRight:
                     i < stats.length - 1 ? '1px solid var(--border)' : 'none',
                 }}
+                className={i >= 2 ? 'border-t sm:border-t-0' : ''}
               >
                 <Stat stat={s} />
               </div>

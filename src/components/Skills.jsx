@@ -30,10 +30,10 @@ export default function Skills() {
           animate={isInView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
             Tech <span className="grad">Stack</span>
           </h2>
-          <p className="text-sm mb-10" style={{ color: 'var(--text-3)' }}>
+          <p className="text-sm mb-5 sm:mb-6" style={{ color: 'var(--text-3)' }}>
             Technologies I work with daily
           </p>
         </motion.div>
@@ -43,21 +43,21 @@ export default function Skills() {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={stagger}
-          className="grid grid-cols-1 md:grid-cols-2 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5"
         >
           {skills.map((cat) => (
             <motion.div key={cat.category} variants={pop}>
-              <div className="glass h-full" style={{ padding: '40px' }}>
+              <div className="glass h-full p-4 sm:p-6 md:p-[40px]">
               {/* Category label */}
               <h3
-                className="text-xs font-semibold uppercase tracking-[0.15em]"
-                style={{ color: 'var(--text-3)', borderBottom: '1px solid var(--border)', paddingBottom: '12px', marginBottom: '20px' }}
+                className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.15em]"
+                style={{ color: 'var(--text-3)', borderBottom: '1px solid var(--border)', paddingBottom: '10px', marginBottom: '16px' }}
               >
                 {cat.category}
               </h3>
 
               {/* Skill items */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {cat.items.map((skill) => (
                   <motion.div
                     key={skill.name}
@@ -65,10 +65,10 @@ export default function Skills() {
                     className="skill-card"
                   >
                     <div className="icon-wrap">
-                      <skill.icon size={16} />
+                      <skill.icon size={14} />
                     </div>
                     <span
-                      className="text-[13px] font-medium"
+                      className="text-[12px] sm:text-[13px] font-medium"
                       style={{ color: 'var(--text)' }}
                     >
                       {skill.name}

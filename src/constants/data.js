@@ -244,3 +244,43 @@ export const achievements = [
     detail: 'Full-Stack Development & DevOps · 2026',
   },
 ]
+
+// ============================================
+// CURRENTLY BUILDING
+// ============================================
+
+export const currentlyBuilding = {
+  project: 'Developer Portfolio v2',
+  emoji: '🔨',
+}
+
+// ============================================
+// EXPERIENCE TIMELINE
+// ============================================
+
+export const experience = [
+  {
+    icon: '📜',
+    title: '100xDevs Cohort 3.0',
+    org: 'Harkirat Singh',
+    period: '2025 — 2026',
+    description:
+      'Intensive full-stack development program covering MERN stack, DevOps with Docker & AWS, system design, and production-grade application deployment.',
+  },
+  {
+    icon: '🎓',
+    title: 'B.E. Information Technology',
+    org: 'Savitribai Phule Pune University',
+    period: '2023 — 2027 (Expected)',
+    description:
+      'CGPA: 9.16/10. Ranked 1st in IT department (Semester 1). Focused on Data Structures, Algorithms, Web Development, and AI/ML.',
+  },
+  {
+    icon: '💻',
+    title: 'Self-Taught Developer',
+    org: 'Open Source & Personal Projects',
+    period: '2023 — Present',
+    description:
+      'Built and shipped 3+ production applications. Solved 100+ DSA problems on LeetCode & GeeksforGeeks. Achieved Institute Rank 70/2421 on GFG.',
+  },
+]
