@@ -10,7 +10,7 @@ const fade = (delay = 0) => ({
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative flex items-center" style={{ minHeight: '100vh', paddingTop: '60px' }}>
+    <section id="hero" className="relative flex items-center" style={{ minHeight: 'calc(100svh - 64px)', paddingTop: '60px' }}>
       {/* Subtle radial glow */}
       <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[500px] pointer-events-none opacity-60" style={{ background: 'radial-gradient(ellipse, rgba(59,130,246,0.08), transparent 70%)', filter: 'blur(60px)' }} />
 

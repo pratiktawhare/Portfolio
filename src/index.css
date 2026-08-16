@@ -12,8 +12,8 @@
   --bg: #050505;
   --bg-card: rgba(255, 255, 255, 0.09);
   --bg-card-hover: rgba(255, 255, 255, 0.13);
-  --bg-dock: rgba(255, 255, 255, 0.15);
-  --border-dock: rgba(255, 255, 255, 0.15);
+  --bg-dock: rgba(10, 10, 10, 0.82);
+  --border-dock: rgba(255, 255, 255, 0.18);
   --accent: #3b82f6;
   --accent-hover: #60a5fa;
   --gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
@@ -33,8 +33,8 @@
   --bg: #fafaf9;
   --bg-card: rgba(0, 0, 0, 0.06);
   --bg-card-hover: rgba(0, 0, 0, 0.09);
-  --bg-dock: rgba(0, 0, 0, 0.1);
-  --border-dock: rgba(0, 0, 0, 0.15);
+  --bg-dock: rgba(245, 245, 244, 0.90);
+  --border-dock: rgba(0, 0, 0, 0.18);
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
   --gradient: linear-gradient(135deg, #2563eb, #7c3aed);
@@ -271,8 +271,8 @@
   border: 1px solid var(--border-dock);
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 .dock-btn {
@@ -376,8 +376,8 @@
     border-bottom: none;
     justify-content: space-evenly;
     background: var(--bg-dock);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
     gap: 0;
   }
   .dock-btn { 
@@ -411,6 +411,10 @@
   .btn {
     font-size: 12px;
     padding: 8px 14px;
+  }
+  /* Ensure page content isn't hidden behind fixed dock */
+  body {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
   }
 }
 
