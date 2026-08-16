@@ -41,7 +41,7 @@ export default function Hero() {
             {/* CTAs */}
             <motion.div {...fade(0.3)} className="flex flex-wrap items-center" style={{ gap: '12px', marginBottom: '24px' }}>
               <a href="#projects" className="btn btn-accent" style={{ padding: '12px 20px', fontSize: '13px', borderRadius: '12px' }}><FiArrowRight size={15} /> View Projects</a>
-              <a href="/resume/Resume_V4.pdf" target="_blank" className="btn" style={{ padding: '12px 20px', fontSize: '13px', borderRadius: '12px' }}><FiDownload size={15} /> Resume</a>
+              <a href="/resume/Pratik_Resume_V7.pdf" target="_blank" className="btn" style={{ padding: '12px 20px', fontSize: '13px', borderRadius: '12px' }}><FiDownload size={15} /> Resume</a>
             </motion.div>
 
             {/* Socials */}
@@ -66,7 +66,7 @@ export default function Hero() {
           <motion.div {...fade(0.2)} className="order-1 lg:order-2 flex justify-center lg:justify-end mb-6 lg:mb-0">
             <div className="relative w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[360px] md:h-[360px] lg:w-[440px] lg:h-[440px] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden" style={{ border: '1px solid var(--border)', background: 'var(--bg-card)' }}>
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 mix-blend-overlay z-10 pointer-events-none" />
-              <img src="/images/profile.jpg" alt={personalInfo.name} className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]" loading="eager"
+              <img src="/images/profile.jpeg" alt={personalInfo.name} className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]" loading="eager"
                 onError={(e) => { e.target.style.display='none'; e.target.parentElement.innerHTML='<span style="font-size:32px;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-3);font-weight:700">PT</span>' }} />
             </div>
           </motion.div>

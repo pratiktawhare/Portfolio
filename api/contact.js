@@ -1,6 +1,4 @@
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -14,9 +12,17 @@ export default async function handler(req, res) {
   }
 
   try {
-    await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>',
-      to: ['pratiktawhare3@gmail.com'],
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
+    });
+
+    await transporter.sendMail({
+      from: `"Portfolio Contact" <${process.env.GMAIL_USER}>`,
+      to: process.env.GMAIL_USER,
       replyTo: email,
       subject: `Portfolio Contact: ${name}`,
       html: `
@@ -48,6 +54,9 @@ export default async function handler(req, res) {
     return res.status(200).json({ success: true });
   } catch (error) {
     console.error('Email error:', error);
-    return res.status(500).json({ error: 'Failed to send email' });
+    return res.status(500).json({
+      error: 'Failed to send email',
+      detail: error?.message || String(error),
+    });
   }
 }

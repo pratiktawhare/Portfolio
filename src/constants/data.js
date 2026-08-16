@@ -5,6 +5,7 @@ import {
   FiExternalLink,
   FiDownload,
   FiArrowRight,
+  FiBarChart2,
 } from 'react-icons/fi'
 import {
   SiLeetcode,
@@ -25,7 +26,6 @@ import {
   SiMysql,
   SiPostgresql,
   SiPrisma,
-
   SiDocker,
   SiGithubactions,
   SiNginx,
@@ -33,8 +33,12 @@ import {
   SiGithub,
   SiPostman,
   SiVite,
+  SiNumpy,
+  SiPandas,
+  SiScikitlearn,
+  SiJupyter,
 } from 'react-icons/si'
-import { FaJava, FaAws } from 'react-icons/fa'
+import { FaAws, FaBrain } from 'react-icons/fa'
 
 // ============================================
 // PERSONAL INFO
@@ -45,7 +49,7 @@ export const personalInfo = {
   title: 'Full-Stack · AI · DevOps Developer',
   tagline:
     'I build scalable web applications and ship them to the cloud — end to end.',
-  bio: "I'm a 3rd year B.E. Information Technology student at Savitribai Phule Pune University (CGPA: 9.16/10). I love building AI-powered, production-ready web applications — from designing efficient backend architectures to deploying them on AWS with Docker and CI/CD pipelines. Currently open to internships and full-time opportunities in Full-Stack, DevOps, or AI/ML engineering roles.",
+  bio: "I'm a final year B.E. Information Technology student at Savitribai Phule Pune University (CGPA: 9.20/10). I love building AI-powered, production-ready web applications — from designing efficient backend architectures to deploying them on AWS with Docker and CI/CD pipelines. Also skilled in data science and machine learning, including data analysis, visualization, and model building with Python. Currently open to internships and full-time opportunities in Full-Stack, DevOps, or AI/ML engineering roles.",
   email: 'pratiktawhare3@gmail.com',
   location: 'Pune, Maharashtra, India',
   education: "B.E. IT — SPPU '27",
@@ -105,10 +109,10 @@ export const navLinks = [
 // ============================================
 
 export const stats = [
-  { value: 9.16, suffix: '/10', label: 'CGPA', decimals: 2 },
+  { value: 9.20, suffix: '/10', label: 'CGPA', decimals: 2 },
   { value: 3, suffix: '+', label: 'Projects Shipped', decimals: 0 },
-  { value: 100, suffix: '+', label: 'DSA Problems Solved', decimals: 0 },
-  { value: 70, suffix: '/2421', label: 'GFG Institute Rank', decimals: 0 },
+  { value: 200, suffix: '+', label: 'DSA Problems Solved', decimals: 0 },
+  { value: 43, suffix: '/2421', label: 'GFG Institute Rank', decimals: 0 },
 ]
 
 // ============================================
@@ -122,7 +126,6 @@ export const skills = [
       { name: 'JavaScript', icon: SiJavascript },
       { name: 'TypeScript', icon: SiTypescript },
       { name: 'C++', icon: SiCplusplus },
-      { name: 'Java', icon: FaJava },
       { name: 'Python', icon: SiPython },
     ],
   },
@@ -130,7 +133,7 @@ export const skills = [
     category: 'Frontend',
     items: [
       { name: 'React.js', icon: SiReact },
-      { name: 'Next.js', icon: SiNextdotjs },
+      { name: 'Next.js 15', icon: SiNextdotjs },
       { name: 'HTML5', icon: SiHtml5 },
       { name: 'CSS3', icon: SiCss },
       { name: 'Tailwind CSS', icon: SiTailwindcss },
@@ -147,12 +150,31 @@ export const skills = [
     ],
   },
   {
+    category: 'AI / LLM',
+    items: [
+      { name: 'Google Gemini', icon: FaBrain },
+      { name: 'Groq', icon: FaBrain },
+      { name: 'OpenAI API', icon: FaBrain },
+      { name: 'Prompt Engineering', icon: FaBrain },
+    ],
+  },
+  {
+    category: 'Data Science & ML',
+    items: [
+      { name: 'NumPy', icon: SiNumpy },
+      { name: 'Pandas', icon: SiPandas },
+      { name: 'Scikit-learn', icon: SiScikitlearn },
+      { name: 'Jupyter', icon: SiJupyter },
+      { name: 'Power BI', icon: FiBarChart2 },
+    ],
+  },
+  {
     category: 'Databases',
     items: [
       { name: 'MongoDB', icon: SiMongodb },
       { name: 'MySQL', icon: SiMysql },
       { name: 'PostgreSQL', icon: SiPostgresql },
-      { name: 'Prisma', icon: SiPrisma },
+      { name: 'Prisma ORM', icon: SiPrisma },
     ],
   },
   {
@@ -220,13 +242,13 @@ export const projects = [
 export const achievements = [
   {
     icon: '💻',
-    title: 'Institute Rank 70 / 2421',
+    title: 'Institute Rank 43 / 2421',
     detail: 'GeeksforGeeks Platform',
   },
   {
     icon: '🧠',
-    title: '100+ DSA Problems Solved',
-    detail: 'LeetCode · C++ · Arrays, Strings, Linked List, Recursion',
+    title: '200+ DSA Problems Solved',
+    detail: 'LeetCode · C++ · Arrays, Strings, Trees, Graphs, DP, Recursion, Heaps',
   },
   {
     icon: '🏆',
@@ -235,13 +257,18 @@ export const achievements = [
   },
   {
     icon: '🎓',
-    title: 'CGPA: 9.16 / 10',
+    title: 'CGPA: 9.20 / 10',
     detail: 'B.E. Information Technology · SPPU',
   },
   {
     icon: '📜',
     title: '100xDevs Cohort 3.0',
     detail: 'Full-Stack Development & DevOps · 2026',
+  },
+  {
+    icon: '📊',
+    title: 'The Ultimate Job Ready Data Science Course',
+    detail: 'CodeWithHarry · Python, ML, Deep Learning & LLMs',
   },
 ]
 
@@ -260,6 +287,14 @@ export const currentlyBuilding = {
 
 export const experience = [
   {
+    icon: '🚀',
+    title: 'Software Engineering Intern',
+    org: 'ConvoBrains, Gurgaon (Remote)',
+    period: 'March 2026',
+    description:
+      'Built the complete frontend for ConvoBrains CDP from scratch — a marketing platform with 18 industry-specific landing pages using Next.js 15 and Tailwind CSS. Reduced 5+ PostgreSQL queries to 2–3 per call by merging DB lookups into a single coalesced query with asyncio.gather(). Wrote and maintained LLM prompts covering call classification, competitor detection, and scoring across 7 call sub-types.',
+  },
+  {
     icon: '📜',
     title: '100xDevs Cohort 3.0',
     org: 'Harkirat Singh',
@@ -273,7 +308,7 @@ export const experience = [
     org: 'Savitribai Phule Pune University',
     period: '2023 — 2027 (Expected)',
     description:
-      'CGPA: 9.16/10. Ranked 1st in IT department (Semester 1). Focused on Data Structures, Algorithms, Web Development, and AI/ML.',
+      'CGPA: 9.20/10. Ranked 1st in IT department (Semester 1). Focused on Data Structures, Algorithms, Web Development, and AI/ML.',
   },
   {
     icon: '💻',
@@ -281,6 +316,6 @@ export const experience = [
     org: 'Open Source & Personal Projects',
     period: '2023 — Present',
     description:
-      'Built and shipped 3+ production applications. Solved 100+ DSA problems on LeetCode & GeeksforGeeks. Achieved Institute Rank 70/2421 on GFG.',
+      'Built and shipped 3+ production applications. Solved 200+ DSA problems on LeetCode & GeeksforGeeks. Achieved Institute Rank 43/2421 on GFG.',
   },
 ]
