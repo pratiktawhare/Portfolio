@@ -6,6 +6,7 @@ import {
   FiDownload,
   FiArrowRight,
   FiBarChart2,
+  FiCode,
 } from 'react-icons/fi'
 import {
   SiLeetcode,
@@ -17,18 +18,22 @@ import {
   SiPython,
   SiReact,
   SiNextdotjs,
-  SiHtml5,
-  SiCss,
   SiTailwindcss,
   SiNodedotjs,
   SiExpress,
+  SiFastapi,
+  SiPydantic,
+  SiPrisma,
   SiMongodb,
   SiMysql,
   SiPostgresql,
-  SiPrisma,
+  SiSqlite,
   SiDocker,
   SiGithubactions,
   SiNginx,
+  SiLinux,
+  SiVercel,
+  SiRender,
   SiGit,
   SiGithub,
   SiPostman,
@@ -36,9 +41,25 @@ import {
   SiNumpy,
   SiPandas,
   SiScikitlearn,
+  SiStreamlit,
   SiJupyter,
+  SiOpenai,
+  SiGooglegemini,
+  SiLangchain,
+  SiHuggingface,
 } from 'react-icons/si'
-import { FaAws, FaBrain } from 'react-icons/fa'
+import { FaAws, FaBrain, FaRobot, FaDatabase } from 'react-icons/fa6'
+import {
+  TbBrain,
+  TbTopologyStar3,
+  TbSparkles,
+  TbChartBar,
+  TbVectorTriangle,
+  TbSearch,
+  TbMicrophone,
+  TbEye,
+  TbPrompt,
+} from 'react-icons/tb'
 
 // ============================================
 // PERSONAL INFO
@@ -46,13 +67,14 @@ import { FaAws, FaBrain } from 'react-icons/fa'
 
 export const personalInfo = {
   name: 'Pratik Tawhare',
-  title: 'Full-Stack · AI · DevOps Developer',
+  title: 'AI Engineer & Full-Stack Developer',
   tagline:
-    'I build scalable web applications and ship them to the cloud — end to end.',
-  bio: "I'm a final year B.E. Information Technology student at Savitribai Phule Pune University (CGPA: 9.20/10). I love building AI-powered, production-ready web applications — from designing efficient backend architectures to deploying them on AWS with Docker and CI/CD pipelines. Also skilled in data science and machine learning, including data analysis, visualization, and model building with Python. Currently open to internships and full-time opportunities in Full-Stack, DevOps, or AI/ML engineering roles.",
+    'Building agentic AI systems, multimodal RAG platforms, and production full-stack web applications deployed to the cloud.',
+  bio: "I'm a B.E. Information Technology student at Savitribai Phule Pune University (CGPA: 9.20/10, Batch 2027). I specialize in building agentic AI, production RAG systems, and multimodal LLM applications — backed by robust full-stack architectures (FastAPI, Next.js, React) and deployed seamlessly with AWS, Docker, and CI/CD pipelines. Currently open to AI Engineer, Full-Stack, and Software Engineering opportunities.",
   email: 'pratiktawhare3@gmail.com',
+  phone: '+91 9359737559',
   location: 'Pune, Maharashtra, India',
-  education: "B.E. IT — SPPU '27",
+  education: "B.E. IT — SPPU '27 (CGPA: 9.20)",
 }
 
 // ============================================
@@ -81,6 +103,11 @@ export const socialLinks = [
     icon: SiGeeksforgeeks,
   },
   {
+    name: 'Portfolio',
+    url: 'https://pratik-tawhare.vercel.app',
+    icon: FiExternalLink,
+  },
+  {
     name: 'X',
     url: 'https://x.com/Pratik_2005_',
     icon: SiX,
@@ -98,6 +125,7 @@ export const socialLinks = [
 
 export const navLinks = [
   { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Achievements', href: '#achievements' },
@@ -109,91 +137,115 @@ export const navLinks = [
 // ============================================
 
 export const stats = [
-  { value: 9.20, suffix: '/10', label: 'CGPA', decimals: 2 },
-  { value: 3, suffix: '+', label: 'Projects Shipped', decimals: 0 },
-  { value: 200, suffix: '+', label: 'DSA Problems Solved', decimals: 0 },
+  { value: 9.20, suffix: '/10', label: 'CGPA (SPPU)', decimals: 2 },
+  { value: 5, suffix: '+', label: 'Projects Shipped', decimals: 0 },
+  { value: 230, suffix: '+', label: 'LeetCode DSA in C++', decimals: 0 },
   { value: 43, suffix: '/2421', label: 'GFG Institute Rank', decimals: 0 },
 ]
 
 // ============================================
-// SKILLS
+// SKILLS (Prioritized: AI & Agents -> Full-Stack -> Cloud/DevOps -> Databases/Tools)
 // ============================================
 
 export const skills = [
   {
-    category: 'Languages',
+    category: 'AI / GenAI & Agents',
     items: [
-      { name: 'JavaScript', icon: SiJavascript },
-      { name: 'TypeScript', icon: SiTypescript },
-      { name: 'C++', icon: SiCplusplus },
-      { name: 'Python', icon: SiPython },
+      { name: 'LangGraph', icon: TbTopologyStar3 },
+      { name: 'LangChain (LCEL)', icon: SiLangchain },
+      { name: 'Agentic AI', icon: TbBrain },
+      { name: 'RAG Systems', icon: FaBrain },
+      { name: 'ChromaDB (Vector DB)', icon: TbVectorTriangle },
+      { name: 'Multimodal AI', icon: TbEye },
+      { name: 'Embeddings & Search', icon: TbSearch },
+      { name: 'Hugging Face', icon: SiHuggingface },
+      { name: 'Transformers.js', icon: TbSparkles },
+      { name: 'Prompt Engineering', icon: TbPrompt },
     ],
   },
   {
-    category: 'Frontend',
+    category: 'LLMs & AI APIs',
     items: [
+      { name: 'OpenAI API', icon: SiOpenai },
+      { name: 'Google Gemini', icon: SiGooglegemini },
+      { name: 'Groq (LPU)', icon: FaBrain },
+      { name: 'Mistral AI', icon: TbSparkles },
+      { name: 'OpenAI Whisper', icon: TbMicrophone },
+      { name: 'Tavily Search API', icon: TbSearch },
+      { name: 'Sarvam AI', icon: FaRobot },
+    ],
+  },
+  {
+    category: 'Machine Learning & Analytics',
+    items: [
+      { name: 'Scikit-learn', icon: SiScikitlearn },
+      { name: 'Machine Learning', icon: FaBrain },
+      { name: 'Deep Learning', icon: TbChartBar },
+      { name: 'NumPy', icon: SiNumpy },
+      { name: 'Pandas', icon: SiPandas },
+      { name: 'Streamlit', icon: SiStreamlit },
+      { name: 'Power BI & Tableau', icon: FiBarChart2 },
+      { name: 'EDA & ETL Pipelines', icon: FiCode },
+      { name: 'Jupyter', icon: SiJupyter },
+    ],
+  },
+  {
+    category: 'Full-Stack & Backend',
+    items: [
+      { name: 'FastAPI', icon: SiFastapi },
       { name: 'React.js', icon: SiReact },
       { name: 'Next.js 15', icon: SiNextdotjs },
-      { name: 'HTML5', icon: SiHtml5 },
-      { name: 'CSS3', icon: SiCss },
-      { name: 'Tailwind CSS', icon: SiTailwindcss },
-    ],
-  },
-  {
-    category: 'Backend',
-    items: [
       { name: 'Node.js', icon: SiNodedotjs },
       { name: 'Express.js', icon: SiExpress },
       { name: 'REST APIs', icon: FiExternalLink },
-      { name: 'JWT', icon: FiExternalLink },
+      { name: 'Tailwind CSS', icon: SiTailwindcss },
       { name: 'WebSockets', icon: FiExternalLink },
+      { name: 'JWT Auth', icon: FiExternalLink },
+      { name: 'Pydantic & SQLModel', icon: SiPydantic },
+      { name: 'Prisma ORM', icon: SiPrisma },
     ],
   },
   {
-    category: 'AI / LLM',
+    category: 'Programming Languages',
     items: [
-      { name: 'Google Gemini', icon: FaBrain },
-      { name: 'Groq', icon: FaBrain },
-      { name: 'OpenAI API', icon: FaBrain },
-      { name: 'Prompt Engineering', icon: FaBrain },
+      { name: 'Python', icon: SiPython },
+      { name: 'TypeScript', icon: SiTypescript },
+      { name: 'JavaScript', icon: SiJavascript },
+      { name: 'C++ (OOP & DSA)', icon: SiCplusplus },
+      { name: 'SQL', icon: FaDatabase },
     ],
   },
   {
-    category: 'Data Science & ML',
+    category: 'Cloud & DevOps',
     items: [
-      { name: 'NumPy', icon: SiNumpy },
-      { name: 'Pandas', icon: SiPandas },
-      { name: 'Scikit-learn', icon: SiScikitlearn },
-      { name: 'Jupyter', icon: SiJupyter },
-      { name: 'Power BI', icon: FiBarChart2 },
+      { name: 'AWS (EC2, S3, SQS)', icon: FaAws },
+      { name: 'Docker', icon: SiDocker },
+      { name: 'CI/CD (GitHub Actions)', icon: SiGithubactions },
+      { name: 'Nginx', icon: SiNginx },
+      { name: 'Linux', icon: SiLinux },
+      { name: 'Vercel', icon: SiVercel },
+      { name: 'Render', icon: SiRender },
     ],
   },
   {
     category: 'Databases',
     items: [
+      { name: 'PostgreSQL', icon: SiPostgresql },
+      { name: 'ChromaDB', icon: TbVectorTriangle },
       { name: 'MongoDB', icon: SiMongodb },
       { name: 'MySQL', icon: SiMysql },
-      { name: 'PostgreSQL', icon: SiPostgresql },
-      { name: 'Prisma ORM', icon: SiPrisma },
+      { name: 'SQLite', icon: SiSqlite },
     ],
   },
   {
-    category: 'DevOps & Cloud',
-    items: [
-      { name: 'AWS', icon: FaAws },
-      { name: 'Docker', icon: SiDocker },
-      { name: 'GitHub Actions', icon: SiGithubactions },
-      { name: 'Nginx', icon: SiNginx },
-      { name: 'CI/CD', icon: FiArrowRight },
-    ],
-  },
-  {
-    category: 'Tools',
+    category: 'Tools & Ecosystem',
     items: [
       { name: 'Git', icon: SiGit },
       { name: 'GitHub', icon: SiGithub },
       { name: 'Postman', icon: SiPostman },
+      { name: 'VS Code', icon: FiCode },
       { name: 'Vite', icon: SiVite },
+      { name: 'FFmpeg & yt-dlp', icon: FiArrowRight },
     ],
   },
 ]
@@ -204,71 +256,133 @@ export const skills = [
 
 export const projects = [
   {
-    name: 'SkillSense',
-    label: 'AI Resume Matching Platform',
+    name: 'MediLens',
+    label: 'Agentic Clinical AI & Triage Platform',
+    category: 'AI / Agents',
     description:
-      'AI-powered resume-job matching platform that extracts 90+ skills from PDF resumes using a custom NLP pipeline. Generates 384-dimensional embeddings for privacy-first semantic matching with sub-500ms API response times.',
-    tech: ['React.js', 'Node.js', 'MongoDB', 'Transformers.js', 'Recharts'],
-    image: '/images/skillsense.png',
-    demo: 'https://skill-sense-psi.vercel.app',
-    github: 'https://github.com/pratiktawhare/skillsense',
+      'Autonomous clinical AI agent built with LangGraph that dynamically routes queries between local ChromaDB retrieval and live Tavily medical web search based on confidence thresholds (<0.60), with clinical safety guardrails. Features a hybrid RAG pipeline over 3,688 chunks from a 637-page medical reference (sub-100ms retrieval) with page-level citations, multimodal inputs (Groq Vision with Gemini fallback, Groq Whisper STT), client-side Web Speech TTS (<50ms), and an async FastAPI backend with Neon PostgreSQL.',
+    tech: [
+      'LangGraph',
+      'LangChain',
+      'FastAPI',
+      'React 19',
+      'ChromaDB',
+      'Groq',
+      'Gemini',
+      'Tavily',
+      'PostgreSQL',
+      'Vercel',
+      'Render',
+    ],
+    image: '/images/medilens.svg',
+    demo: 'https://medilens-chatbot.vercel.app',
+    github: 'https://github.com/pratiktawhare/MediLens-Chatbot',
   },
   {
-    name: 'Resume-Xpert',
-    label: 'Full-Stack Resume Builder',
+    name: 'InsightFlow AI',
+    label: 'AI Meeting & Video Analysis Assistant (RAG)',
+    category: 'AI / Agents',
     description:
-      'Full-stack resume builder with real-time preview, ATS-friendly templates, secure JWT authentication, and efficient user data management with one-click PDF export.',
-    tech: ['React.js', 'Node.js', 'MongoDB', 'JWT', 'jsPDF'],
-    image: '/images/resumexpert.png',
-    demo: 'https://resumexpert.pratik.codes',
-    github: 'https://github.com/pratiktawhare/resumeXpert',
+      'Conversational LLM and RAG assistant that transcribes, summarizes, and answers questions about meeting recordings and YouTube videos, replacing paid tools. Engineered a hybrid multilingual transcription engine (local Whisper for English + Sarvam AI for Hindi/Hinglish) and a LangChain LCEL pipeline with Mistral AI for summaries and action items. Features conversational RAG with ChromaDB & HuggingFace embeddings via an interactive Streamlit dashboard.',
+    tech: [
+      'Python',
+      'LangChain (LCEL)',
+      'OpenAI Whisper',
+      'Mistral AI',
+      'Sarvam AI',
+      'ChromaDB',
+      'HuggingFace',
+      'Streamlit',
+      'FFmpeg',
+      'yt-dlp',
+    ],
+    image: '/images/insightflow.svg',
+    demo: 'https://insightflow-ai-psi.streamlit.app/',
+    github: 'https://github.com/pratiktawhare/AI-Video-Assistant',
+  },
+  {
+    name: 'SkillSense',
+    label: 'AI Resume Matching & Recruitment Platform',
+    category: 'AI / Agents',
+    description:
+      'Full-stack recruitment platform with a privacy-first hybrid matching engine combining 384-dimensional semantic embeddings (cosine similarity), skill overlap, and experience fit for explainable match scores. Runs embeddings locally in Node.js with Transformers.js and ONNX Runtime to avoid API costs, with a custom NLP pipeline normalizing 90+ technical skills from PDF resumes.',
+    tech: [
+      'React.js',
+      'Node.js',
+      'Express',
+      'Transformers.js',
+      'ONNX Runtime',
+      'NLP Embeddings',
+      'MongoDB',
+      'Tailwind CSS',
+    ],
+    image: '/images/skillsense.png',
+    demo: 'https://skill-sense-psi.vercel.app',
+    github: 'https://github.com/pratiktawhare/SkillSense',
   },
   {
     name: 'GenUI',
     label: 'AI UI Component Generator',
+    category: 'AI / Agents',
     description:
-      'AI-powered system that generates reusable UI components from natural language prompts using Google Gemini API. Features integrated Monaco Editor for real-time code preview and prototyping.',
-    tech: ['React.js', 'Tailwind CSS', 'Gemini API', 'Monaco'],
+      'Generative AI system that produces reusable, accessible React and Tailwind CSS UI components from natural language prompts using Google Gemini API. Integrated with Monaco Editor for real-time syntax-highlighted code editing, in-browser sandbox rendering, and rapid prototyping.',
+    tech: ['React.js', 'Google Gemini', 'Tailwind CSS', 'Monaco Editor', 'Vite'],
     image: '/images/genui.png',
-    demo: 'https://genui.pratik.codes',
+    demo: 'https://genui-pi.vercel.app',
     github: 'https://github.com/pratiktawhare/genui',
+  },
+  {
+    name: 'Resume-Xpert',
+    label: 'Full-Stack ATS Resume Builder',
+    category: 'Full-Stack',
+    description:
+      'Production-ready full-stack resume builder featuring real-time preview, ATS-friendly templates, secure JWT authentication, and structured user data management in MongoDB with one-click high-fidelity PDF export.',
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'jsPDF', 'Tailwind CSS'],
+    image: '/images/resumexpert.png',
+    demo: 'https://resumexpert-frontend.vercel.app',
+    github: 'https://github.com/pratiktawhare/resumeXpert',
   },
 ]
 
 // ============================================
-// ACHIEVEMENTS
+// ACHIEVEMENTS & CERTIFICATIONS
 // ============================================
 
 export const achievements = [
   {
-    icon: '💻',
-    title: 'Institute Rank 43 / 2421',
-    detail: 'GeeksforGeeks Platform',
+    icon: '🧠',
+    title: '230+ DSA Problems Solved in C++',
+    detail: 'LeetCode · Arrays, Strings, Trees, Graphs, DP, Heaps & Recursion',
   },
   {
-    icon: '🧠',
-    title: '200+ DSA Problems Solved',
-    detail: 'LeetCode · C++ · Arrays, Strings, Trees, Graphs, DP, Recursion, Heaps',
+    icon: '💻',
+    title: 'Institute Rank 43 / 2421',
+    detail: 'GeeksforGeeks Platform · Consistent algorithmic problem solving',
   },
   {
     icon: '🏆',
-    title: '1st Rank — IT Department',
+    title: '1st Rank — IT Department (1 / 120)',
     detail: 'Semester 1 · Savitribai Phule Pune University',
   },
   {
     icon: '🎓',
-    title: 'CGPA: 9.20 / 10',
-    detail: 'B.E. Information Technology · SPPU',
+    title: 'Academic Excellence — 9.20 / 10 CGPA',
+    detail: 'B.E. Information Technology · SPPU (Batch 2023–2027)',
   },
   {
     icon: '📜',
-    title: '100xDevs Cohort 3.0',
-    detail: 'Full-Stack Development & DevOps · 2026',
+    title: '100xDevs Cohort 3.0 (2026)',
+    detail: 'Full-Stack Development, WebSockets & DevOps by Harkirat Singh',
   },
   {
     icon: '📊',
     title: 'The Ultimate Job Ready Data Science Course',
-    detail: 'CodeWithHarry · Python, ML, Deep Learning & LLMs',
+    detail: 'CodeWithHarry · Python, Machine Learning, Deep Learning & LLMs',
+  },
+  {
+    icon: '☁️',
+    title: 'AWS Certified Cloud Practitioner (CLF-C02)',
+    detail: 'In Progress · Cloud architecture, security, compute, storage & networking',
   },
 ]
 
@@ -277,8 +391,8 @@ export const achievements = [
 // ============================================
 
 export const currentlyBuilding = {
-  project: 'Developer Portfolio v2',
-  emoji: '🔨',
+  project: 'MediLens · Clinical AI Agent',
+  emoji: '🤖',
 }
 
 // ============================================
@@ -287,12 +401,12 @@ export const currentlyBuilding = {
 
 export const experience = [
   {
-    icon: '🚀',
+    icon: '🤖',
     title: 'Software Engineering Intern',
     org: 'ConvoBrains, Gurgaon (Remote)',
-    period: 'March 2026',
+    period: 'March 2026 – April 2026',
     description:
-      'Built the complete frontend for ConvoBrains CDP from scratch — a marketing platform with 18 industry-specific landing pages using Next.js 15 and Tailwind CSS. Reduced 5+ PostgreSQL queries to 2–3 per call by merging DB lookups into a single coalesced query with asyncio.gather(). Wrote and maintained LLM prompts covering call classification, competitor detection, and scoring across 7 call sub-types.',
+      'Engineered an AI Call Intelligence Platform. Designed LLM prompts using Gemini, Groq, and OpenAI for call classification, competitor detection, and scoring across 7 call sub-types producing structured outputs. Reduced 5+ PostgreSQL queries to 2–3 per call using merged lookups and Python asyncio.gather(). Developed queue-based pipelines on AWS EC2, S3, and SQS, integrated LLM microservices with REST APIs, and built 18 high-converting landing pages with Next.js 15 and Tailwind CSS.',
   },
   {
     icon: '📜',
@@ -300,22 +414,22 @@ export const experience = [
     org: 'Harkirat Singh',
     period: '2025 — 2026',
     description:
-      'Intensive full-stack development program covering MERN stack, DevOps with Docker & AWS, system design, and production-grade application deployment.',
+      'Intensive full-stack development and DevOps fellowship. Mastered modern full-stack architectures (React, Next.js, Node.js, WebSockets), containerization with Docker, CI/CD with GitHub Actions, AWS cloud infrastructure, and production deployments.',
   },
   {
     icon: '🎓',
-    title: 'B.E. Information Technology',
+    title: 'B.E. in Information Technology',
     org: 'Savitribai Phule Pune University',
     period: '2023 — 2027 (Expected)',
     description:
-      'CGPA: 9.20/10. Ranked 1st in IT department (Semester 1). Focused on Data Structures, Algorithms, Web Development, and AI/ML.',
+      'CGPA: 9.20/10. Ranked 1st out of 120 students in the IT Department (Semester 1). Deep academic and practical foundation in Data Structures & Algorithms (C++), Operating Systems, DBMS, System Design, and Artificial Intelligence.',
   },
   {
     icon: '💻',
-    title: 'Self-Taught Developer',
-    org: 'Open Source & Personal Projects',
+    title: 'Self-Taught Developer & Open Source',
+    org: 'AI & Full-Stack Projects',
     period: '2023 — Present',
     description:
-      'Built and shipped 3+ production applications. Solved 200+ DSA problems on LeetCode & GeeksforGeeks. Achieved Institute Rank 43/2421 on GFG.',
+      'Built and shipped 5+ production AI and full-stack applications including MediLens (clinical triage agent), InsightFlow AI (meeting analysis RAG), and SkillSense (local embeddings matching). Solved 230+ DSA problems on LeetCode & GeeksforGeeks (Institute Rank 43/2421).',
   },
 ]

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="if-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b071a"/>
+      <stop offset="50%" stop-color="#130a2a"/>
+      <stop offset="100%" stop-color="#05020c"/>
+    </linearGradient>
+    <linearGradient id="if-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="if-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(23, 15, 38, 0.90)"/>
+      <stop offset="100%" stop-color="rgba(18, 10, 32, 0.75)"/>
+    </linearGradient>
+    <radialGradient id="if-glow1" cx="25%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="rgba(139, 92, 246, 0.25)"/>
+      <stop offset="100%" stop-color="rgba(139, 92, 246, 0)"/>
+    </radialGradient>
+    <radialGradient id="if-glow2" cx="80%" cy="75%" r="45%">
+      <stop offset="0%" stop-color="rgba(236, 72, 153, 0.2)"/>
+      <stop offset="100%" stop-color="rgba(236, 72, 153, 0)"/>
+    </radialGradient>
+    <pattern id="if-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#if-bg)"/>
+  <rect width="1280" height="720" fill="url(#if-grid)"/>
+  <circle cx="250" cy="200" r="380" fill="url(#if-glow1)"/>
+  <circle cx="1050" cy="520" r="420" fill="url(#if-glow2)"/>
+
+  <!-- Top Header -->
+  <rect x="80" y="50" width="1120" height="60" rx="16" fill="url(#if-card)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <circle cx="115" cy="80" r="6" fill="#ef4444"/>
+  <circle cx="135" cy="80" r="6" fill="#f59e0b"/>
+  <circle cx="155" cy="80" r="6" fill="#10b981"/>
+
+  <text x="190" y="86" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" letter-spacing="0.5">InsightFlow AI <tspan fill="#a855f7" font-weight="400">| Meeting &amp; Video RAG Intelligence</tspan></text>
+  <rect x="890" y="68" width="150" height="26" rx="13" fill="rgba(139, 92, 246, 0.15)" stroke="#8b5cf6" stroke-width="1"/>
+  <circle cx="905" cy="81" r="4" fill="#8b5cf6"/>
+  <text x="918" y="85" fill="#c084fc" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">LangChain LCEL</text>
+
+  <rect x="1055" y="68" width="125" height="26" rx="13" fill="rgba(236, 72, 153, 0.15)" stroke="#ec4899" stroke-width="1"/>
+  <text x="1070" y="85" fill="#f472b6" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Whisper + Sarvam</text>
+
+  <!-- Left: Audio / Video Pipeline Card -->
+  <rect x="80" y="130" width="340" height="530" rx="20" fill="url(#if-card)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="110" y="175" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" letter-spacing="1">AUDIO &amp; SPEECH PIPELINE</text>
+
+  <!-- Waveform animation simulation -->
+  <g transform="translate(110, 205)">
+    <rect x="0" y="0" width="280" height="80" rx="14" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.06)"/>
+    <rect x="20" y="30" width="4" height="20" rx="2" fill="#8b5cf6"/>
+    <rect x="30" y="20" width="4" height="40" rx="2" fill="#a855f7"/>
+    <rect x="40" y="10" width="4" height="60" rx="2" fill="#ec4899"/>
+    <rect x="50" y="25" width="4" height="30" rx="2" fill="#8b5cf6"/>
+    <rect x="60" y="15" width="4" height="50" rx="2" fill="#c084fc"/>
+    <rect x="70" y="28" width="4" height="24" rx="2" fill="#ec4899"/>
+    <rect x="80" y="18" width="4" height="44" rx="2" fill="#8b5cf6"/>
+    <rect x="90" y="32" width="4" height="16" rx="2" fill="#a855f7"/>
+    <rect x="100" y="12" width="4" height="56" rx="2" fill="#ec4899"/>
+    <rect x="110" y="22" width="4" height="36" rx="2" fill="#8b5cf6"/>
+    <rect x="120" y="30" width="4" height="20" rx="2" fill="#c084fc"/>
+    <rect x="130" y="14" width="4" height="52" rx="2" fill="#ec4899"/>
+    <rect x="140" y="24" width="4" height="32" rx="2" fill="#8b5cf6"/>
+    <rect x="150" y="10" width="4" height="60" rx="2" fill="#a855f7"/>
+    <rect x="160" y="26" width="4" height="28" rx="2" fill="#ec4899"/>
+    <rect x="170" y="18" width="4" height="44" rx="2" fill="#8b5cf6"/>
+    <rect x="180" y="28" width="4" height="24" rx="2" fill="#c084fc"/>
+    <rect x="190" y="15" width="4" height="50" rx="2" fill="#ec4899"/>
+    <rect x="200" y="25" width="4" height="30" rx="2" fill="#8b5cf6"/>
+    <rect x="210" y="32" width="4" height="16" rx="2" fill="#a855f7"/>
+    <rect x="220" y="18" width="4" height="44" rx="2" fill="#ec4899"/>
+    <rect x="230" y="26" width="4" height="28" rx="2" fill="#8b5cf6"/>
+    <rect x="240" y="32" width="4" height="16" rx="2" fill="#c084fc"/>
+    <rect x="250" y="22" width="4" height="36" rx="2" fill="#ec4899"/>
+  </g>
+
+  <!-- Pipeline Steps -->
+  <g transform="translate(110, 310)">
+    <rect x="0" y="0" width="280" height="60" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)"/>
+    <text x="20" y="26" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11">1. SPEECH RECOGNITION</text>
+    <text x="20" y="47" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Local Whisper + Sarvam (Hinglish)</text>
+
+    <rect x="0" y="75" width="280" height="60" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)"/>
+    <text x="20" y="101" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11">2. VECTOR INDEXING</text>
+    <text x="20" y="122" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">ChromaDB + HuggingFace Embeddings</text>
+
+    <rect x="0" y="150" width="280" height="60" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)"/>
+    <text x="20" y="176" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11">3. LLM SUMMARIES &amp; Q&amp;A</text>
+    <text x="20" y="197" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">Mistral AI + LangChain LCEL Chains</text>
+
+    <rect x="0" y="225" width="280" height="60" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)"/>
+    <text x="20" y="251" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11">4. MEDIA EXTRACTION</text>
+    <text x="20" y="272" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600">FFmpeg Audio &amp; yt-dlp Video Stream</text>
+  </g>
+
+  <!-- Right: Streamlit Chat Interface Simulation -->
+  <rect x="440" y="130" width="760" height="530" rx="20" fill="url(#if-card)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Video summary card -->
+  <rect x="470" y="160" width="700" height="150" rx="16" fill="rgba(0,0,0,0.35)" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="490" y="180" width="130" height="24" rx="12" fill="rgba(139,92,246,0.2)"/>
+  <text x="502" y="196" fill="#c084fc" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">EXECUTIVE BRIEF</text>
+  <text x="635" y="196" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11">Q3 All-Hands Engineering Meeting (48m 12s)</text>
+
+  <text x="490" y="235" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600">Key Decisions &amp; Action Items Extracted:</text>
+  <text x="490" y="262" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Microservices migration approved on AWS EC2 &amp; SQS queue pipeline.</text>
+  <text x="490" y="284" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Replaced third-party transcription APIs with local Whisper + Sarvam AI.</text>
+
+  <!-- Conversational RAG Question & Answer -->
+  <rect x="470" y="330" width="700" height="175" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)"/>
+  
+  <!-- User Question -->
+  <rect x="490" y="350" width="44" height="20" rx="10" fill="rgba(59,130,246,0.2)"/>
+  <text x="500" y="364" fill="#60a5fa" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">USER</text>
+  <text x="548" y="365" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500">What was the architectural decision regarding asynchronous queue workers?</text>
+
+  <!-- AI Answer -->
+  <line x1="490" y1="385" x2="1150" y2="385" stroke="rgba(255,255,255,0.05)"/>
+  <rect x="490" y="400" width="80" height="20" rx="10" fill="rgba(168,85,247,0.2)"/>
+  <text x="500" y="414" fill="#c084fc" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">ASSISTANT</text>
+  <text x="580" y="414" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11">ChromaDB Timestamp: [24:18 - 25:04]</text>
+
+  <text x="490" y="445" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="13">"The team decided on AWS SQS with worker polling and merged SQL queries using asyncio.gather() to handle high-concurrency spikes without dropping tasks."</text>
+  <text x="490" y="475" fill="#ec4899" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">✓ Confidence: 98.7% · Vector Cosine Similarity: 0.92</text>
+
+  <!-- Input bar -->
+  <rect x="470" y="530" width="700" height="55" rx="14" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="500" y="563" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="13">Ask any question about this meeting or video transcript...</text>
+  <rect x="1115" y="542" width="40" height="32" rx="8" fill="#8b5cf6"/>
+  <polygon points="1130,552 1144,558 1130,564" fill="#ffffff"/>
+</svg>

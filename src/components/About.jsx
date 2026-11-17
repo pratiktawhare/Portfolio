@@ -91,6 +91,9 @@ export default function About() {
               {[
                 `📍 ${personalInfo.location}`,
                 `🎓 ${personalInfo.education}`,
+                '🤖 Agentic AI & Multimodal RAG',
+                '⚡ FastAPI · React · Next.js 15',
+                '☁️ AWS, Docker & CI/CD',
               ].map((t) => (
                 <span key={t} className="pill">
                   {t}

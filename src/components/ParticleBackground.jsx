@@ -1,6 +1,11 @@
 import { useRef, useMemo, useState, useEffect } from 'react'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
+
+function pseudoRandom(seed) {
+  const x = Math.sin(seed) * 10000
+  return x - Math.floor(x)
+}
 
 function Particles({ mouse }) {
   const meshRef = useRef()
@@ -9,18 +14,18 @@ function Particles({ mouse }) {
   const positions = useMemo(() => {
     const pos = new Float32Array(count * 3)
     for (let i = 0; i < count * 3; i += 3) {
-      pos[i] = (Math.random() - 0.5) * 20
-      pos[i + 1] = (Math.random() - 0.5) * 12
-      pos[i + 2] = (Math.random() - 0.5) * 8
+      pos[i] = (pseudoRandom(i + 1) - 0.5) * 20
+      pos[i + 1] = (pseudoRandom(i + 2) - 0.5) * 12
+      pos[i + 2] = (pseudoRandom(i + 3) - 0.5) * 8
     }
     return pos
   }, [])
 
   const speeds = useMemo(() => {
-    return Array.from({ length: count }, () => ({
-      x: (Math.random() - 0.5) * 0.002,
-      y: (Math.random() - 0.5) * 0.002,
-      z: (Math.random() - 0.5) * 0.001,
+    return Array.from({ length: count }, (_, i) => ({
+      x: (pseudoRandom(i * 3 + 10) - 0.5) * 0.002,
+      y: (pseudoRandom(i * 3 + 11) - 0.5) * 0.002,
+      z: (pseudoRandom(i * 3 + 12) - 0.5) * 0.001,
     }))
   }, [])
 

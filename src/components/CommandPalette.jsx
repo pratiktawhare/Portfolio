@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiSearch, FiHome, FiUser, FiCode, FiFolder, FiAward, FiMail, FiDownload, FiGithub, FiLinkedin, FiX } from 'react-icons/fi'
-import { SiLeetcode, SiX as SiXIcon } from 'react-icons/si'
+import { FiSearch, FiHome, FiUser, FiCode, FiFolder, FiAward, FiMail, FiDownload, FiGithub, FiLinkedin, FiX, FiExternalLink } from 'react-icons/fi'
+import { SiLeetcode, SiGeeksforgeeks, SiX as SiXIcon } from 'react-icons/si'
 
 const actions = [
   { id: 'home', label: 'Go to Home', icon: FiHome, action: () => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }), group: 'Navigation' },
@@ -11,10 +11,16 @@ const actions = [
   { id: 'projects', label: 'Go to Projects', icon: FiFolder, action: () => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }), group: 'Navigation' },
   { id: 'achievements', label: 'Go to Achievements', icon: FiAward, action: () => document.getElementById('achievements')?.scrollIntoView({ behavior: 'smooth' }), group: 'Navigation' },
   { id: 'contact', label: 'Go to Contact', icon: FiMail, action: () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), group: 'Navigation' },
-  { id: 'resume', label: 'Download Resume', icon: FiDownload, action: () => window.open('/resume/Resume_V4.pdf', '_blank'), group: 'Actions' },
-  { id: 'github', label: 'Open GitHub', icon: FiGithub, action: () => window.open('https://github.com/pratiktawhare', '_blank'), group: 'Social' },
-  { id: 'linkedin', label: 'Open LinkedIn', icon: FiLinkedin, action: () => window.open('https://linkedin.com/in/pratik-tawhare', '_blank'), group: 'Social' },
-  { id: 'leetcode', label: 'Open LeetCode', icon: SiLeetcode, action: () => window.open('https://leetcode.com/u/pratik-tawhare/', '_blank'), group: 'Social' },
+  { id: 'resume', label: 'Download Resume (PDF)', icon: FiDownload, action: () => window.open('/resume/Pratik_Resume_V7.pdf', '_blank'), group: 'Actions' },
+  { id: 'medilens', label: 'Launch MediLens (Clinical AI Agent)', icon: FiExternalLink, action: () => window.open('https://medilens-chatbot.vercel.app', '_blank'), group: 'Projects' },
+  { id: 'insightflow', label: 'Launch InsightFlow AI (Meeting RAG)', icon: FiExternalLink, action: () => window.open('https://insightflow-ai-psi.streamlit.app/', '_blank'), group: 'Projects' },
+  { id: 'skillsense', label: 'Launch SkillSense (AI Resume Matching)', icon: FiExternalLink, action: () => window.open('https://skill-sense-psi.vercel.app', '_blank'), group: 'Projects' },
+  { id: 'genui', label: 'Launch GenUI (AI Component Generator)', icon: FiExternalLink, action: () => window.open('https://genui-pi.vercel.app', '_blank'), group: 'Projects' },
+  { id: 'resumexpert', label: 'Launch Resume-Xpert (ATS Resume Builder)', icon: FiExternalLink, action: () => window.open('https://resumexpert-frontend.vercel.app', '_blank'), group: 'Projects' },
+  { id: 'github', label: 'Open GitHub Profile', icon: FiGithub, action: () => window.open('https://github.com/pratiktawhare', '_blank'), group: 'Social' },
+  { id: 'linkedin', label: 'Open LinkedIn Profile', icon: FiLinkedin, action: () => window.open('https://linkedin.com/in/pratik-tawhare', '_blank'), group: 'Social' },
+  { id: 'leetcode', label: 'Open LeetCode Profile', icon: SiLeetcode, action: () => window.open('https://leetcode.com/u/pratik-tawhare/', '_blank'), group: 'Social' },
+  { id: 'gfg', label: 'Open GeeksforGeeks Profile', icon: SiGeeksforgeeks, action: () => window.open('https://www.geeksforgeeks.org/profile/pratiktawhare', '_blank'), group: 'Social' },
   { id: 'x', label: 'Open X (Twitter)', icon: SiXIcon, action: () => window.open('https://x.com/Pratik_2005_', '_blank'), group: 'Social' },
 ]
 
@@ -40,9 +46,12 @@ export default function CommandPalette() {
   // Focus input on open
   useEffect(() => {
     if (open) {
-      setQuery('')
-      setSelectedIdx(0)
-      setTimeout(() => inputRef.current?.focus(), 50)
+      const timer = setTimeout(() => {
+        setQuery('')
+        setSelectedIdx(0)
+        inputRef.current?.focus()
+      }, 40)
+      return () => clearTimeout(timer)
     }
   }, [open])
 
@@ -53,11 +62,6 @@ export default function CommandPalette() {
       (a) => a.label.toLowerCase().includes(q) || a.group.toLowerCase().includes(q)
     )
   }, [query])
-
-  // Reset selection when filtered changes
-  useEffect(() => {
-    setSelectedIdx(0)
-  }, [filtered])
 
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowDown') {
@@ -120,7 +124,10 @@ export default function CommandPalette() {
               <input
                 ref={inputRef}
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => {
+                  setQuery(e.target.value)
+                  setSelectedIdx(0)
+                }}
                 onKeyDown={handleKeyDown}
                 placeholder="Search actions..."
                 className="w-full bg-transparent border-none outline-none text-sm font-medium"

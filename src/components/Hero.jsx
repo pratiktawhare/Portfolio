@@ -24,7 +24,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p {...fade(0.1)} className="text-sm sm:text-base md:text-lg max-w-xl leading-[1.8]" style={{ color: 'var(--text-2)', marginBottom: '20px' }}>
-              {personalInfo.title} — crafting high-performance web applications with clean architecture, AI integrations, and production-ready DevOps pipelines.
+              <span className="font-semibold" style={{ color: 'var(--text)' }}>{personalInfo.title}</span> specializing in <span style={{ color: 'var(--text)' }}>Agentic AI, Multimodal RAG systems</span>, and scalable production applications deployed to AWS with Docker &amp; CI/CD.
             </motion.p>
 
             {/* Status badges */}
@@ -46,7 +46,7 @@ export default function Hero() {
 
             {/* Socials */}
             <motion.div {...fade(0.4)} className="flex items-center flex-wrap" style={{ gap: '10px' }}>
-              {socialLinks.slice(0, 5).map((s) => (
+              {socialLinks.map((s) => (
                 <a key={s.name} href={s.url} target={s.url.startsWith('mailto') ? undefined : '_blank'} rel="noopener noreferrer" title={s.name} className="dock-btn hover-lift" style={{ width: 40, height: 40, background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '12px' }} aria-label={s.name}>
                   <s.icon size={16} />
                 </a>
@@ -58,7 +58,7 @@ export default function Hero() {
               <kbd className="text-[10px] font-mono px-1.5 py-0.5 rounded" style={{ background: 'var(--bg-card)', color: 'var(--text-3)', border: '1px solid var(--border)' }}>
                 Ctrl+K
               </kbd>
-              <span className="text-[11px]" style={{ color: 'var(--text-3)' }}>Quick navigation</span>
+              <span className="text-[11px]" style={{ color: 'var(--text-3)' }}>Quick command palette</span>
             </motion.div>
           </div>
 

@@ -75,6 +75,23 @@ export default function Contact({ onToast }) {
                   {personalInfo.email}
                 </a>
               </div>
+              {personalInfo.phone && (
+                <div>
+                  <p
+                    className="text-[10px] sm:text-xs uppercase tracking-widest font-medium mb-2"
+                    style={{ color: 'var(--text-3)' }}
+                  >
+                    Phone
+                  </p>
+                  <a
+                    href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
+                    className="text-xs sm:text-sm font-medium"
+                    style={{ color: 'var(--text)' }}
+                  >
+                    {personalInfo.phone}
+                  </a>
+                </div>
+              )}
               <div>
                 <p
                   className="text-[10px] sm:text-xs uppercase tracking-widest font-medium mb-2"

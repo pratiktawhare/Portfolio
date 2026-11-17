@@ -34,7 +34,7 @@ export default function Skills() {
             Tech <span className="grad">Stack</span>
           </h2>
           <p className="text-sm mb-5 sm:mb-6" style={{ color: 'var(--text-3)' }}>
-            Technologies I work with daily
+            Core expertise in AI &amp; LLMs, backed by scalable Full-Stack, Cloud &amp; DevOps foundations
           </p>
         </motion.div>
 
@@ -49,12 +49,22 @@ export default function Skills() {
             <motion.div key={cat.category} variants={pop}>
               <div className="glass h-full p-4 sm:p-6 md:p-[40px]">
               {/* Category label */}
-              <h3
-                className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.15em]"
-                style={{ color: 'var(--text-3)', borderBottom: '1px solid var(--border)', paddingBottom: '10px', marginBottom: '16px' }}
+              <div
+                className="flex items-center justify-between pb-2.5 mb-4 border-b"
+                style={{ borderColor: 'var(--border)' }}
               >
-                {cat.category}
-              </h3>
+                <h3
+                  className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.15em]"
+                  style={{ color: 'var(--text-3)' }}
+                >
+                  {cat.category}
+                </h3>
+                {cat.category.includes('AI') && (
+                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-cyan-950/70 text-cyan-400 border border-cyan-500/30">
+                    AI Core
+                  </span>
+                )}
+              </div>
 
               {/* Skill items */}
               <div className="flex flex-wrap gap-2 sm:gap-3">
